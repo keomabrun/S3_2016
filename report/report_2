@@ -1,0 +1,11 @@
+# Report 2 (1st August 2016)
+
+## Morning
+
+* We talked about ourselves and made a presentation about our projects and us.
+
+* We downloaded Arduino IDE for our Arduino boards and started coding in the software for Arduino.
+
+* We programmed the LEDs for our boards to blink and needed some soldering to connect the resistors to LEDs.
+
+	* At first we used the Arduino boards for LEDs that were integrated in the boards. Later we added external LEDs, the ones that needed soldering. After that we used the bread bord to enlarge the circut. We had 2 LEDs on bread board connected with the Arduino.
