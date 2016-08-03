@@ -1,0 +1,12 @@
+#Goals and ideas
+
+* box design
+* com. RPi -> BLE -> Android(JAVA)
+* Web server (Python)
+
+* build own moisture sensor
+* humidity/temp sensor -> data analysis(Python)
+* water conductivity with salt
+* improve arduino code:
+	* type of plant(moisture requirement)
+	* adding the support for additional sensors
