@@ -27,3 +27,16 @@
 
 * Writing the code for broadcasting and receving the right
   frequency (433 MHz using radio emitter)
+
+## References
+
+https://en.wikipedia.org/wiki/OSI_model
+https://en.wikipedia.org/wiki/Internet_protocol_suite
+
+http://learnpythonthehardway.org/
+http://bottlepy.org/docs/dev/index.html
+https://en.wikipedia.org/wiki/Wireshark
+
+https://github.com/WiringPi/WiringPi
+https://github.com/sui77/rc-switch
+http://shop.ninjablocks.com/blogs/how-to/7506204-adding-433-to-your-raspberry-pi
