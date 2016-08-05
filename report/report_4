@@ -4,11 +4,26 @@
 
 * Talking about:
 	Internet protocols (TCP/UDP, DNS, IP, DHCP, HTTP, MAC, ...)
-	layers (Application, Transport, Network, Link), this displays 4 layers.You can also display it with 7.
+	layers (Application, Transport, Network, Link)
+        >this displays 4 layers. You can also display it with 7.
 	routing (uni-, multi-, broadcast) and networking, connections
 	IPv4 and IPv6
 	attacking, security: DDOS, DOS
 
-* Making a small LAN whit switch
+* Making a small LAN with a switch
 
-* Scripting in python, practicing for raspberry pi
+* Scripting in python, practising for raspberry pi
+
+
+
+## Afternoon
+
+* Asembling the whole circut based on our sketch.
+  We also rocked the demonstrations we had.
+
+* Making our localhost server and web form in HTML and python
+
+* Sniffing the trafic with Wireshark
+
+* Writing the code for broadcasting and receving the right
+  frequency (433 MHz using radio emitter)
