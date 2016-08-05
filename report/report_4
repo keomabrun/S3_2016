@@ -1,0 +1,14 @@
+# Report 4 (5th August 2016)
+
+## Morning
+
+* Talking about:
+	Internet protocols (TCP/UDP, DNS, IP, DHCP, HTTP, MAC, ...)
+	layers (Application, Transport, Network, Link), this displays 4 layers.You can also display it with 7.
+	routing (uni-, multi-, broadcast) and networking, connections
+	IPv4 and IPv6
+	attacking, security: DDOS, DOS
+
+* Making a small LAN whit switch
+
+* Scripting in python, practicing for raspberry pi
