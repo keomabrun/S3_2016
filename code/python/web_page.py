@@ -9,10 +9,21 @@ import time
 
 @route('/')
 def hello():
+    # loading data
     df = pd.read_csv("/home/pi/data.csv")
     df["date"] = pd.to_datetime(df.time,unit='s')
+
+    # plot design
+    plt.ylabel('Moisture (%)', fontsize=18)
+    plt.xlabel('Time', fontsize=16)
+    plt.gcf().autofmt_xdate()
+    axes = plt.gca()
+    axes.set_ylim([0,100])
+
+    # plotting
     plt.plot(df.date,df.val)
     plt.savefig('graphs.png')
+
     return static_file("web_page.html",".")
 
 @route('/<name>')
