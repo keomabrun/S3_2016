@@ -1,24 +1,15 @@
-print "hello PW"
+from bottle import route, run, static_file, post, request
 
-x=1
-if x==1:
-    print "voila!"
-    print "toto"
+@route('/hello')
+def hello():
+    # return "Hello World!"
+    return static_file("index.html",".") #adding external file in website
 
+@post('/login')
+def do_login():
+    username = request.forms.get('username')
+    password = request.forms.get('password') 
+    return username, password
 
-y="test"
-z="tet"
-
-print y+z #this brigs them together: testtet
-
-xx= ["t", "a"]
-
-print x
-print xx[0]
-
-x.append("r")
-print x
-
-xy = {"a" : 1, "b" : 2}
-print xy["1"]
+run(host='0.0.0.0', port=8080, debug=False)
 

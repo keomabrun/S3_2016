@@ -1,12 +1,17 @@
 from bottle import route, run, static_file, template
 
-import pandas as pd
+import pandas as pd #importing libraries and changing their names
+import matplotlib
+matplotlib.use("Pdf")
 import matplotlib.pyplot as plt
+import datetime
+import time 
 
 @route('/')
 def hello():
-    df = pd.read_csv("test.csv")
-    plt.plot(df.index,df.val)
+    df = pd.read_csv("/home/pi/data.csv")
+    df["date"] = pd.to_datetime(df.time,unit='s')
+    plt.plot(df.date,df.val)
     plt.savefig('graphs.png')
     return static_file("web_page.html",".")
 
@@ -14,4 +19,4 @@ def hello():
 def getfile(name):
     return static_file(name,".")
 
-run(host="localhost", port=8080, debug=True)
+run(host="0.0.0.0", port=8080, debug=True)
