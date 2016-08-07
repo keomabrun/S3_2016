@@ -3,7 +3,7 @@
 	color: #6459ED;
 }
 
-.floating-box {
+.floating-box {                 /*this is a class atribute that enables div to be positioned in one line */
 	display: inline-block;
 	float: left;	
 	width: 45%;
