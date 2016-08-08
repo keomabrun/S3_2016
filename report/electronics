@@ -1,0 +1,30 @@
+#Automated watering
+
+Our automated watering system consists of two major parts:
+	one which is responsible for collecting data about the soil and one which brings off the watering.
+The device that joins the two parts is the Arduino Nano. 
+
+
+##Measuring moisture
+
+To measure the soil moisture we use the following devices:
+    moisture sensor, Arduino Nano, a 5V battery and cables to connect them.
+To make the system work we use an Arduino code (the Arduino language is based on C/C++) which controls the other parts of the circuit.
+Our sensor measures the electrical conductivity of the soil and sends an analog signal to the Arduino Board.
+The sensor we use provides analog values that can vary between 0 and 1024.
+If we put the sensor in the air, we get a 0 as it's conductivity is very low in ordinary circumstances (i.e 10 to the power of -15).
+If we make a shortcut with a cable between the two pins of the sensor, we get the maximum value as the cable has negligible resistance.
+To calibrate the maximum humidity we put the sensor in water and at room temperature, this value is about 900.
+If we want to calibrate the minimal humidity in our soil we need to dry it and measure the conductivity of the dry material.
+Due to time limitation we consider the minimal value to be 0.
+According to this data we can calculate the relative moisture percentage of soil and meet the plants water needs.
+
+
+##Watering system
+
+Our watering system contains a waterpump, a transistor (NPN), a diode, a battery and everything is connected to our Arduino Board.
+We use the transistor as a switch and the diode as a safety mechanism.
+Based on the data that our sensor provides, the Arduino Nano decides (thanks to our code) wether the plant needs water.
+According to that it can close the circuit of the water pump for a certain amount of time (by using our transistor) and make the pump push water to the soil. 
+If it happens, we wait for a short time so the water can spread and then the whole process starts again.
+If it does not happen, then the measurement continues.
