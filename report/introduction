@@ -1,0 +1,28 @@
+INTRODUCTION
+
+The goal of the project is to establish an automated system that would water the plant according to its needs. This idea could solve watering the
+filelds of various plants on an industrial size. Throughout the fields, the water is not spred the same. That effects the global productivity and
+quality of the plants used in the industry. Multiple devices like automated water pumps could measure the moisture of sertain parts of the fields
+and controll the amount of water in those parts. That way we improve the efficiency of the industrial production.
+Our prototype is currently aplicable to personal needs. The main advantages are the facts that it doesn't use much electricity and that the whole
+product is very compact.
+
+The whole product has three main parts: the small computer with the moisture sensor, the water pump, and the server for self-hosting.
+The moisture sensor measures conductivity of the soil. The more water there is, the higher the connductivity. Althou, the problem may occurre if there
+is a high amount of metal ions, from the soil itself or accumulated over time from water. It represents a possible problem becouse it can effect the
+conductivity of the soil and couse a higher measurment. It sends the analog data to the small computer capable of prossesing the data and storing a
+small software in it. More precisely, we use Arduino Nano as "small, complete, and breadboard-friendly board" (1 - footnote) for storing and executing
+our software. The code is written in C/C++ like language. Arduino processes the data from the sensor, determines if the value is above or under the
+defined limit and enables the pump to water the plant  if the value is low. The limiting value for the pump is defined according to the type of the
+plant and the type of the soil becouse they effect the conductivity of the soil. At the same time Arduino sends the data from the moisture sensor to
+the Raspberry Pi via radio frequency. Raspberry Pi is a small computer similar to the Arduino but more powerful. It has an Ethernet port for
+connection to the internet. We use it as server which stores our data and displays it like a graph in a form of a web page. We use web server so we
+can monitor the system from the distance and easily see the current state of the plant according to the graph.
+The pump acquires the most when it comes to electricity. Arduino and the pump together are powered by an external battery via USB port.
+The Raspberry Pi has it's own power source.
+
+
+
+Footnotes:
+
+1. Arduino Nano (https://www.arduino.cc/en/Main/ArduinoBoardNano)
