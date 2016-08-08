@@ -1,0 +1,7 @@
+Abstract
+
+On the Summer School of Science 2016 in Pozega on S3++ camp we have been given a problem about an automated watering system for plants.
+The goal of our project is to make a completely automated system which provides water to a plant according to its needs.
+We solved the problem by making a circuit which involves a water pump and a moisture sensor that are connected to an Arduino Nano.
+Arduino Nano controls the water pump according to the data it gets from the moisture sensor.
+The produced data is sent to Raspberry Pi from where it is displayed on a web page.
