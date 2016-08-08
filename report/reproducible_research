@@ -1,0 +1,20 @@
+Reproducible research
+
+One of the main goals of this project is to show the importance of reproducible research.
+This is a kind of research which can be repeated after the initial research.
+Currently, this is a big problem in the science community since a lot of research is being done, but not all of them can be repeated.
+This is due to unspecified procedures which were used during the research and/or insufficient information about the used equipment and the result of the research.
+One of the most popular ways of making research reproducible is using a version control system.
+Version control system is a system which is used for remembering all versions of the research.
+It remembers the difference between two versions of the same part of the research so the changes are visible and easily readable.
+Saving all versions of the research contains data of successes and failures.
+This way the same mistakes cannot be made since there are already notes on how they happened and how they could be stopped.
+Version control systems encourage originality in a way that they have the option of "branching".
+Branching is an event which happens after the research is split into more parts and they concentrate on different aspects of the problem.
+This is a useful concept since every branch can access the data which was collected before branching, but cannot see the information other branches have collected. 
+Not all research can use a version control system because of the amount of data, complexity of the procedures or the type of research.
+
+On our project, we used Git as a version control system on which we saved all files connected to the project.
+Every time we change something, we send the changes we made in our repository on Github ("push") so the current version is saved.
+When the changes are monitored, we can see what was the problem and how we solved it.
+
