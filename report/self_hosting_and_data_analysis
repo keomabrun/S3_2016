@@ -1,0 +1,44 @@
+Self-hosting and data analysis
+
+Intro
+
+Now that the automated system for watering a plant is completed, we want to be able to store and analyze the data.
+To do so, we establish a communication between the Arduino Nano and the Raspberry Pi.
+Once that is done, we start modifying the software for the Raspberry Pi which writes the recieved data into a file.
+Next step is designing the web page and displaying the data on a graph.
+
+RF COMMUNICATION
+
+Our automated system is controlled by an Arduino Nano which activates the pump according to the information it recieves from the moisture sensor.
+To improve the performance of our system and find the optimal settings, we decide to save the data on a server and analyze it.
+To communicate between the Raspberry Pi and the Arduino Nano, we are using a radio transmitter and a reciever.
+Our radio transmitter and reciever use the 433 MHz frequency to send and recieve data.
+We use an existing solution(footnote) to recieve the data that we then adapt to save both time and value into a comma-separated value (CSV) file.
+
+OOK
+
+To effectivly transfer the data, we use on/off keying.
+On/off keying is a type of digital modulation which represents data as a series of 1-value and 0-value that represent presence or absence of the carrier wave.
+Another type of modulation is analog modulation which can be amplitude modulation (AM) and frequency modulation (FM).
+Our Arduino Nano is equipped with a transmitter which either emits or does not emit waves which are recognized by a reciever connected to the Raspberry Pi as 1-value and 0-value.
+When the server recieves the data, it translates the series of binary digits into useful information which represents the data sent from the Arduino Nano.
+After that, the time when the data was recieved is remembered and if it satisfies all the conditions, the data is saved.
+
+Interferences
+
+By using radio transmission of the information, we are exposed to different types of interferences.
+When waves are travelling from the transmitter to the reciever, there is a probability that some data can be lost.
+To decrese the probability of data loss, we send the same data three times in a very small timeframe (<1s).
+After the data is sent, Raspberry Pi usually recieves multiple packets of data that were sent.
+Since the same data is recieved more than once, we only need to store one packet of data and the rest we can discard.
+We pick which data to store by modifying the existing solution.
+We set conditions which need to be satisfied.
+The conditions are: the value of the data must not be 0, and the time the packet was recieved must not be the same as the time the last packet was recieved. 
+
+HOSTING
+
+After the database is set up, we display the collected data on a web page.
+The web page needs to contain a graph which represents the relative amount of moisture of soil over time and some additional information about our project.
+We decide to use Python to create a web server, HTML for the content and CSS for the style.
+
+Web server
