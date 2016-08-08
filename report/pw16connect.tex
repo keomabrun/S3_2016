@@ -73,7 +73,7 @@ It sends the analog data to the small computer capable of prossesing the data an
 
 % water automation
 
-More precisely, we use Arduino Nano as "small, complete, and breadboard-friendly board"~\footnote{https://www.arduino.cc/en/Main/ArduinoBoardNano} for storing and executing our software.
+More precisely, we use Arduino Nano as ``small, complete, and breadboard-friendly board''\footnote{https://www.arduino.cc/en/Main/ArduinoBoardNano} for storing and executing our software.
 The code is written in C/C++ like language.
 The software in Arduino processes the data from the sensor, determines if the value is above or under the defined limit and enables the pump to water the plant if the value is low.
 The limiting value for the pump is defined according to the type of the plant and the type of the soil becouse they effect the conductivity of the soil wich is measured.
@@ -163,7 +163,7 @@ Our automated system is controlled by an Arduino Nano which activates the pump a
 To improve the performance of our system and find the optimal settings, we decide to save the data on a server and analyze it.
 To communicate between the Raspberry Pi and the Arduino Nano, we are using a radio transmitter and a reciever.
 Our radio transmitter and reciever use the 433 MHz frequency to send and recieve data.
-We use an existing solution(footnote) to recieve the data that we then adapt to save both time and value into a comma-separated value (CSV) file.
+We use an existing solution\footnote{\url{https://github.com/ninjablocks/433Utils}}\cite{WiringPi} to recieve the data that we then adapt to save both time and value into a comma-separated value (CSV) file.
 
 % OOK
 
@@ -220,7 +220,7 @@ Not all research can use a version control system because of the amount of data,
 
 % git
 
-On our project, we used Git as a version control system on which we saved all files connected to the project\footnote{\url{https://github.com/keomabrun/S3\_2016}}.
+On our project, we used Git as a version control system on which we saved all files connected to the project\footnote{\url{https://github.com/keomabrun/S3_2016}}.
 Every time we change something, we send the changes we made in our repository on Github ("push") so the current version is saved.
 When the changes are monitored, we can see what was the problem and how we solved it.
 
@@ -266,7 +266,18 @@ We also want to thank Davor and Boris for their experience sharing in electronic
 
 \bibliographystyle{IEEEtran}
 \begin{thebibliography}{10}
-    \bibitem{}
+  \bibitem{WiringPi}
+    GPIO Interface library for the Raspberry Pi.,
+    \url{http://wiringpi.com/pins/}
+  \bibitem{crypto}
+    The Basics of Cryptography,
+    \url{https://fisher.osu.edu/~muhanna.1/pdf/crypto.pdf}
+  \bibitem{internethist}
+    Internet History,
+    \url{http://www.computerhope.com/history/internet.htm}
+  \bibitem{internetpres}
+    The Internet. Jessica Mckellar,
+    \url{https://speakerdeck.com/pyconslides/the-internet-by-jessica-mckellar}
 \end{thebibliography}
 
 \end{document}
