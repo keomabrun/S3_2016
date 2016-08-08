@@ -1,0 +1,31 @@
+.text {
+	text-align: center;
+	color: #6459ED;
+}
+
+.floating-box {                 /*this is a class atribute that enables div to be positioned in one line */
+	display: inline-block;
+	float: left;	
+	width: 45%;
+}
+
+#graph {
+	color: #778899;
+}
+
+#zplot {
+	width: 100%;
+}
+
+/*#graphbox {
+	max-width: 50%;
+	position: relative;	
+}*/
+
+#explanation {
+	text-align: left;
+}
+
+/*#bigdiv {
+	display: inline-block;
+}*/
